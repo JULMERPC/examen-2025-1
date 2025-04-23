@@ -24,7 +24,10 @@ public class EnrollmentService {
     private EnrollmentRepository enrollmentRepository;
 
 
+    @Autowired
     private StudentClient studentClient;
+
+    @Autowired
     private CourseClient courseClient;
 
     public List<EnrollmentDTO> getAllEnrollments() {

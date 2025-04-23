@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class StudentDTO {
-    private Integer id;
+    private Long id;
 
     @NotBlank(message = "Document number is required")
     private String documentNumber;
@@ -29,11 +29,11 @@ public class StudentDTO {
     @NotNull(message = "Current cycle is required")
     private Integer currentCycle;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

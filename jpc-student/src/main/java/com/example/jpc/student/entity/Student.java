@@ -16,7 +16,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @NotBlank(message = "Document number is required")
     @Column(unique = true)
@@ -34,7 +34,7 @@ public class Student {
     private Integer currentCycle;
 
 //    public Student() {  }
-    public Student(Integer id, String documentNumber, String name, String career, String status, Integer currentCycle) {
+    public Student(Long id, String documentNumber, String name, String career, String status, Integer currentCycle) {
     this.id = id;
     this.documentNumber = documentNumber;
     this.name = name;
@@ -48,11 +48,11 @@ public class Student {
     }
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

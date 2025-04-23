@@ -47,16 +47,16 @@ spring:
         - id: jpc-course-service
           uri: lb://jpc-course-service
           predicates:
-            - Path=/course/**
+            - Path=/api/courses/**
 
 
         - id: jpc-enrollment-service
           uri: lb://jpc-enrollment-service
           predicates:
-            - Path=/enrollment/**
+            - Path=/api/enrollments/**
 
 
         - id: jpc-student-service
           uri: lb://jpc-student-service
           predicates:
-            - Path=/student/**
+            - Path=/api/students/**
