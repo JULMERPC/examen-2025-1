@@ -39,3 +39,24 @@ spring:
           uri: lb://ms-cliente-service
           predicates:
             - Path=/cliente/**
+
+
+
+
+
+        - id: jpc-course-service
+          uri: lb://jpc-course-service
+          predicates:
+            - Path=/course/**
+
+
+        - id: jpc-enrollment-service
+          uri: lb://jpc-enrollment-service
+          predicates:
+            - Path=/enrollment/**
+
+
+        - id: jpc-student-service
+          uri: lb://jpc-student-service
+          predicates:
+            - Path=/student/**

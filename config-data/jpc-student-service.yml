@@ -2,10 +2,10 @@ server:
   port: 8081
 spring:
   application:
-    name: ms-student-service
+    name: jpc-student-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/ms-student
+    url: jdbc:mysql://localhost:3306/jpc-student
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver

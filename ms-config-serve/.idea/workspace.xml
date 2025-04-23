@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d79ca17f-8ec5-4e19-a464-0ef3fe377d0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/client/CourseClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/client/StudentClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/dto/CourseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/dto/EnrollmentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/util/StudentSeeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpc-student/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/jpc-student-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/jpc-student-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/MsStudentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/MsStudentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/controller/CategoriaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/dto/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/dto/StudentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/entity/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/repository/CategoriaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/CategoriaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/impl/CategoriaServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/util/CategoriaSeeder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/msconfigserve/MsConfigServeApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/msconfigserve/MsConfigServeApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2ulwVcjQd1bDmSz58LrLlv4yeN5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MsConfigServeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DAD/DAD-2025-1/ms-config-serve&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="MsConfigServeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="jpc-config-serve" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msconfigserve.MsConfigServeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d79ca17f-8ec5-4e19-a464-0ef3fe377d0a" name="Changes" comment="" />
+      <created>1742836495456</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742836495456</updated>
+      <workItem from="1742836496432" duration="2297000" />
+      <workItem from="1743025937884" duration="10949000" />
+      <workItem from="1743133189387" duration="1396000" />
+      <workItem from="1743439398999" duration="2457000" />
+      <workItem from="1743626410026" duration="3780000" />
+      <workItem from="1743684366794" duration="1793000" />
+      <workItem from="1744043433984" duration="461000" />
+      <workItem from="1744043954468" duration="1398000" />
+      <workItem from="1744232020543" duration="8030000" />
+      <workItem from="1744250493735" duration="1423000" />
+      <workItem from="1744294909984" duration="1638000" />
+      <workItem from="1745193591624" duration="756000" />
+      <workItem from="1745418655073" duration="833000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
