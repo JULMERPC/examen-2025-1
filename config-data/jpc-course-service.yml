@@ -1,42 +1,52 @@
 #server:
-#  port: 8082  # Puerto del microservicio
-#
+#  port: 8093
 #spring:
 #  application:
-#    name: ms-pedidos
+#    name: jpc-course-service
+#
 #  datasource:
-#    url: jdbc:mysql://localhost:3306/ms-pedidos
+#    url: jdbc:mysql://localhost:3306/jpc-course
 #    username: root
 #    password:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
 #  jpa:
 #    hibernate:
 #      ddl-auto: update
+#    show-sql: true
+#
+#springdoc:
+#  api-docs:
+#    enabled: true
+#  swagger-ui:
+#    enabled: true
+#    path: /doc/swagger-ui.html
 #
 #eureka:
 #  client:
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka/
+#    serviceUrl:
+#      defaultZone: http://localhost:8090/eureka
 #  instance:
-#    prefer-ip-address: true
+#    hostname: localhost
+#
 
 
 
 server:
+
   port: 8093
 spring:
-  application:
-    name: jpc-course-service
-
   datasource:
-    url: jdbc:mysql://localhost:3306/jpc-course
-    username: root
+    url: jdbc:h2:mem:jpc-course
+    driver-class-name: org.h2.Driver
+    username:
     password:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
   jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
 springdoc:
   api-docs:
@@ -44,7 +54,6 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
-
 eureka:
   client:
     serviceUrl:
@@ -53,7 +62,35 @@ eureka:
     hostname: localhost
 
 
-
-
-
-
+# config-data/jpc-course-service.yml
+#server:
+#  port: 8093
+#
+#spring:
+#  application:
+#    name: jpc-course-service
+#
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/jpc-course
+#    username: root
+#    password:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#
+#springdoc:
+#  api-docs:
+#    enabled: true
+#  swagger-ui:
+#    enabled: true
+#    path: /doc/swagger-ui.html
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8090/eureka
+#  instance:
+#    hostname: localhost

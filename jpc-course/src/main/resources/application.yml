@@ -107,6 +107,20 @@
 #eureka.client.enabled=false
 
 
+#spring:
+#  application:
+#    name: jpc-course-service
+#  profiles:
+#    active: development
+#  config:
+#    import: optional:configserver:http://root:123456@localhost:7070
+#
+#
+
+
+
+
+
 spring:
   application:
     name: jpc-course-service
@@ -117,3 +131,43 @@ spring:
 
 
 
+#server:
+#  port: 8093
+#
+#spring:
+#  application:
+#    name: jpc-course-service
+#
+#  datasource:
+#    url: jdbc:h2:mem:jpc-course
+#    driver-class-name: org.h2.Driver
+#    username: wasa
+#    password:
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    database-platform: org.hibernate.dialect.H2Dialect
+#
+#  h2:
+#    console:
+#      enabled: true
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8090/eureka/
+#    register-with-eureka: true
+#    fetch-registry: true
+
+
+
+#
+#spring:
+#  application:
+#    name: jpc-course-service
+#  profiles:
+#    active: development
+#  config:
+#    import: optional:configserver:http://root:123456@localhost:7070
