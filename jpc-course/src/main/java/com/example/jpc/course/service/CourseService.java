@@ -85,4 +85,18 @@ public class CourseService {
         course.setCycle(dto.getCycle());
         return course;
     }
+
+
+    // En CourseService.java del jpc-course-service
+    public CourseDTO decreaseCapacity(Long id) {
+        Course course = courseRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Course not found with id: " + id));
+
+        if (course.getCapacity() <= 0) {
+            throw new RuntimeException("No capacity available for course with id: " + id);
+        }
+
+        course.setCapacity(course.getCapacity() - 1);
+        return convertToDTO(courseRepository.save(course));
+    }
 }

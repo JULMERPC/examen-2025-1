@@ -1,6 +1,8 @@
 package com.example.jpc.course.controller;
 
 import com.example.jpc.course.dto.CourseDTO;
+import com.example.jpc.course.entity.Course;
+import com.example.jpc.course.repository.CourseRepository;
 import com.example.jpc.course.service.CourseService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +20,8 @@ public class CourseController {
 
     @Autowired
     private CourseService courseService;
+    @Autowired
+    private CourseRepository courseRepository;
 
     @GetMapping
     public ResponseEntity<List<CourseDTO>> getAllCourses() {
@@ -45,4 +49,22 @@ public class CourseController {
         courseService.deleteCourse(id);
         return ResponseEntity.noContent().build();
     }
+
+
+    // En CourseController.java del jpc-course-service
+    @PutMapping("/{id}/decrease-capacity")
+    public ResponseEntity<CourseDTO> decreaseCapacity(@PathVariable Long id) {
+        return ResponseEntity.ok(courseService.decreaseCapacity(id));
+    }
+
+    // En CourseController.java del jpc-course-service
+    @GetMapping("/{id}/available-capacity")
+    public ResponseEntity<Integer> getAvailableCapacity(@PathVariable Long id) {
+        Course course = courseRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Course not found with id: " + id));
+        return ResponseEntity.ok(course.getCapacity());
+    }
+
+
+
 }
