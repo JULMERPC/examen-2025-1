@@ -11,9 +11,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 
-  spring:
-    main:
-      allow-bean-definition-overriding: true
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -218,7 +216,9 @@ management:
 
 
 
-
+  spring:
+    main:
+      allow-bean-definition-overriding: true
 
 
 springdoc:
