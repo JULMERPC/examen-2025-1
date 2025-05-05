@@ -31,47 +31,85 @@ feign:
 
 
 # Configuración de Circuit Breaker con Resilience4j
+#resilience4j:
+#  circuitbreaker:
+#    instances:
+#      courseService:
+#        registerHealthIndicator: true
+#        slidingWindowSize: 10
+#        slidingWindowType: COUNT_BASED
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        minimumNumberOfCalls: 5
+#        waitDurationInOpenState: 5s
+#        failureRateThreshold: 50
+#        eventConsumerBufferSize: 10
+#      studentService:
+#        registerHealthIndicator: true
+#        slidingWindowSize: 10
+#        slidingWindowType: COUNT_BASED
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        minimumNumberOfCalls: 5
+#        waitDurationInOpenState: 5s
+#        failureRateThreshold: 50
+#        eventConsumerBufferSize: 10
+#  timelimiter:
+#    instances:
+#      courseService:
+#        timeoutDuration: 3s
+#      studentService:
+#        timeoutDuration: 3s
+#  retry:
+#    instances:
+#      courseService:
+#        maxAttempts: 3
+#        waitDuration: 500ms
+#        retryExceptions:
+#          - org.springframework.web.client.ResourceAccessException
+#          - java.util.concurrent.TimeoutException
+#      studentService:
+#        maxAttempts: 3
+#        waitDuration: 500ms
+#        retryExceptions:
+#          - org.springframework.web.client.ResourceAccessException
+#          - java.util.concurrent.TimeoutException
+#
 resilience4j:
   circuitbreaker:
     instances:
-      courseService:
+      default:
         registerHealthIndicator: true
         slidingWindowSize: 10
-        slidingWindowType: COUNT_BASED
-        permittedNumberOfCallsInHalfOpenState: 3
         minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 5s
         failureRateThreshold: 50
         eventConsumerBufferSize: 10
-      studentService:
-        registerHealthIndicator: true
-        slidingWindowSize: 10
-        slidingWindowType: COUNT_BASED
-        permittedNumberOfCallsInHalfOpenState: 3
-        minimumNumberOfCalls: 5
-        waitDurationInOpenState: 5s
-        failureRateThreshold: 50
-        eventConsumerBufferSize: 10
-  timelimiter:
-    instances:
       courseService:
-        timeoutDuration: 3s
+        baseConfig: default
       studentService:
-        timeoutDuration: 3s
+        baseConfig: default
+
   retry:
     instances:
+      default:
+        maxAttempts: 3
+        waitDuration: 1s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+
+  timelimiter:
+    instances:
+      default:
+        timeoutDuration: 2s
       courseService:
-        maxAttempts: 3
-        waitDuration: 500ms
-        retryExceptions:
-          - org.springframework.web.client.ResourceAccessException
-          - java.util.concurrent.TimeoutException
+        timeoutDuration: 1s
       studentService:
-        maxAttempts: 3
-        waitDuration: 500ms
-        retryExceptions:
-          - org.springframework.web.client.ResourceAccessException
-          - java.util.concurrent.TimeoutException
+        timeoutDuration: 1s
+
+
+
+
 
 
 # Configuración de Actuator para monitoreo
