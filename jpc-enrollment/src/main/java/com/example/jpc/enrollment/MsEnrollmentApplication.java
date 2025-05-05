@@ -17,11 +17,11 @@ public class MsEnrollmentApplication {
         SpringApplication.run(MsEnrollmentApplication.class, args);
     }
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
+//    @Bean
+//    @LoadBalanced
+//    public RestTemplate restTemplate() {
+//        return new RestTemplate();
+//    }
+//
 
 }
