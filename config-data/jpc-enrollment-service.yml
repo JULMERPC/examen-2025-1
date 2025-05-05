@@ -11,9 +11,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 
-  main:
-    allow-bean-definition-overriding: true
-
+  spring:
+    main:
+      allow-bean-definition-overriding: true
   jpa:
     hibernate:
       ddl-auto: update
@@ -152,7 +152,7 @@ spring:
 #        timeoutDuration: 1s
 
 
- resilience4j:
+resilience4j:
    circuitbreaker:
      configs:
        default:
