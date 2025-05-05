@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 //@EnableCircuitBreaker
 public class FeignConfig {
 
-    @Bean("feignRestTemplate")
+    @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
