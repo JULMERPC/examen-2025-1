@@ -73,6 +73,54 @@ feign:
 #          - org.springframework.web.client.ResourceAccessException
 #          - java.util.concurrent.TimeoutException
 #
+
+
+
+
+
+
+
+
+#resilience4j:
+#  circuitbreaker:
+#    instances:
+#      default:
+#        registerHealthIndicator: true
+#        slidingWindowSize: 10
+#        minimumNumberOfCalls: 5
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        automaticTransitionFromOpenToHalfOpenEnabled: true
+#        waitDurationInOpenState: 5s
+#        failureRateThreshold: 50
+#        eventConsumerBufferSize: 10
+#      courseService:
+#        baseConfig: default
+#      studentService:
+#        baseConfig: default
+#
+#      instances:
+#        courseServiceClient:
+#          baseConfig: default
+#
+#  retry:
+#    instances:
+#      default:
+#        maxAttempts: 3
+#        waitDuration: 1s
+#        enableExponentialBackoff: true
+#        exponentialBackoffMultiplier: 2
+#
+#  timelimiter:
+#    instances:
+#      default:
+#        timeoutDuration: 2s
+#      courseService:
+#        timeoutDuration: 1s
+#      studentService:
+#        timeoutDuration: 1s
+#
+
+
 resilience4j:
   circuitbreaker:
     instances:
@@ -88,6 +136,8 @@ resilience4j:
       courseService:
         baseConfig: default
       studentService:
+        baseConfig: default
+      courseServiceClient:
         baseConfig: default
 
   retry:
@@ -106,7 +156,6 @@ resilience4j:
         timeoutDuration: 1s
       studentService:
         timeoutDuration: 1s
-
 
 
 
