@@ -19,12 +19,6 @@ spring:
       ddl-auto: update
     show-sql: true
 
-feign:
-  circuitbreaker:
-    enabled: true
-
-
-
 
 
 
@@ -120,42 +114,87 @@ feign:
 #        timeoutDuration: 1s
 #
 
+#
+#resilience4j:
+#  circuitbreaker:
+#    instances:
+#      default:
+#        registerHealthIndicator: true
+#        slidingWindowSize: 10
+#        minimumNumberOfCalls: 5
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        automaticTransitionFromOpenToHalfOpenEnabled: true
+#        waitDurationInOpenState: 5s
+#        failureRateThreshold: 50
+#        eventConsumerBufferSize: 10
+#      courseService:
+#        baseConfig: default
+#      studentService:
+#        baseConfig: default
+#      courseServiceClient:
+#        baseConfig: default
+#
+#  retry:
+#    instances:
+#      default:
+#        maxAttempts: 3
+#        waitDuration: 1s
+#        enableExponentialBackoff: true
+#        exponentialBackoffMultiplier: 2
+#
+#  timelimiter:
+#    instances:
+#      default:
+#        timeoutDuration: 2s
+#      courseService:
+#        timeoutDuration: 1s
+#      studentService:
+#        timeoutDuration: 1s
 
-resilience4j:
-  circuitbreaker:
-    instances:
-      default:
-        registerHealthIndicator: true
-        slidingWindowSize: 10
-        minimumNumberOfCalls: 5
-        permittedNumberOfCallsInHalfOpenState: 3
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        waitDurationInOpenState: 5s
-        failureRateThreshold: 50
-        eventConsumerBufferSize: 10
-      courseService:
-        baseConfig: default
-      studentService:
-        baseConfig: default
-      courseServiceClient:
-        baseConfig: default
 
-  retry:
-    instances:
-      default:
-        maxAttempts: 3
-        waitDuration: 1s
-        enableExponentialBackoff: true
-        exponentialBackoffMultiplier: 2
+ resilience4j:
+   circuitbreaker:
+     configs:
+       default:
+         registerHealthIndicator: true
+         slidingWindowSize: 10
+         minimumNumberOfCalls: 5
+         permittedNumberOfCallsInHalfOpenState: 3
+         automaticTransitionFromOpenToHalfOpenEnabled: true
+         waitDurationInOpenState: 5s
+         failureRateThreshold: 50
+         eventConsumerBufferSize: 10
+     instances:
+       courseService:
+         baseConfig: default
+       studentService:
+         baseConfig: default
+   retry:
+     configs:
+       default:
+         maxAttempts: 3
+         waitDuration: 1s
+         enableExponentialBackoff: true
+         exponentialBackoffMultiplier: 2
+     instances:
+       courseService:
+         baseConfig: default
+       studentService:
+         baseConfig: default
+   timelimiter:
+     configs:
+       default:
+         timeoutDuration: 2s
+     instances:
+       courseService:
+         baseConfig: default
+       studentService:
+         baseConfig: default
 
-  timelimiter:
-    instances:
-      default:
-        timeoutDuration: 2s
-      courseService:
-        timeoutDuration: 1s
-      studentService:
-        timeoutDuration: 1s
+
+
+
+
 
 
 
@@ -172,6 +211,13 @@ management:
       enabled: true
     retries:
       enabled: true
+
+  feign:
+    circuitbreaker:
+      enabled: true
+
+
+
 
 
 

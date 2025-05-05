@@ -19,37 +19,37 @@ import java.util.concurrent.CompletableFuture;
 //@Slf4j
 public class StudentServiceClient {
 
-    private static final String STUDENT_SERVICE = "studentService";
-    private static final String STUDENT_BASE_URL = "http://jpc-student-service/api/students/";
-
-    @Autowired
-    private RestTemplate restTemplate;
-
-    private static final Logger log = LoggerFactory.getLogger(StudentServiceClient.class);
-
-
-    @CircuitBreaker(name = STUDENT_SERVICE, fallbackMethod = "getStudentByIdFallback")
-    @TimeLimiter(name = STUDENT_SERVICE)
-    @Retry(name = STUDENT_SERVICE)
-    public CompletableFuture<Map<String, Object>> getStudentById(Long studentId) {
-        log.info("Llamando al servicio de estudiantes para obtener el estudiante con ID: {}", studentId);
-
-        // La respuesta dependerá de la estructura de tu entidad Student
-        Map<String, Object> student = restTemplate.getForObject(STUDENT_BASE_URL + studentId, Map.class);
-
-        return CompletableFuture.completedFuture(student);
-    }
-
-    public CompletableFuture<Map<String, Object>> getStudentByIdFallback(Long studentId, Throwable t) {
-        log.error("Circuit Breaker activado para la llamada al servicio de estudiantes. Error: {}", t.getMessage());
-
-        // Creamos un objeto con datos temporales/alternativos
-        Map<String, Object> fallbackStudent = new HashMap<>();
-        fallbackStudent.put("id", studentId);
-        fallbackStudent.put("name", "Información del estudiante temporalmente no disponible");
-        fallbackStudent.put("email", "no-disponible@ejemplo.com");
-        fallbackStudent.put("status", "CIRCUIT_BREAKER_FALLBACK");
-
-        return CompletableFuture.completedFuture(fallbackStudent);
-    }
+//    private static final String STUDENT_SERVICE = "studentService";
+//    private static final String STUDENT_BASE_URL = "http://jpc-student-service/api/students/";
+//
+//    @Autowired
+//    private RestTemplate restTemplate;
+//
+//    private static final Logger log = LoggerFactory.getLogger(StudentServiceClient.class);
+//
+//
+//    @CircuitBreaker(name = STUDENT_SERVICE, fallbackMethod = "getStudentByIdFallback")
+//    @TimeLimiter(name = STUDENT_SERVICE)
+//    @Retry(name = STUDENT_SERVICE)
+//    public CompletableFuture<Map<String, Object>> getStudentById(Long studentId) {
+//        log.info("Llamando al servicio de estudiantes para obtener el estudiante con ID: {}", studentId);
+//
+//        // La respuesta dependerá de la estructura de tu entidad Student
+//        Map<String, Object> student = restTemplate.getForObject(STUDENT_BASE_URL + studentId, Map.class);
+//
+//        return CompletableFuture.completedFuture(student);
+//    }
+//
+//    public CompletableFuture<Map<String, Object>> getStudentByIdFallback(Long studentId, Throwable t) {
+//        log.error("Circuit Breaker activado para la llamada al servicio de estudiantes. Error: {}", t.getMessage());
+//
+//        // Creamos un objeto con datos temporales/alternativos
+//        Map<String, Object> fallbackStudent = new HashMap<>();
+//        fallbackStudent.put("id", studentId);
+//        fallbackStudent.put("name", "Información del estudiante temporalmente no disponible");
+//        fallbackStudent.put("email", "no-disponible@ejemplo.com");
+//        fallbackStudent.put("status", "CIRCUIT_BREAKER_FALLBACK");
+//
+//        return CompletableFuture.completedFuture(fallbackStudent);
+//    }
 }
