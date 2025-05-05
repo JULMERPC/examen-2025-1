@@ -5,6 +5,7 @@ import com.example.jpc.course.dto.CourseDTO;
 import com.example.jpc.course.entity.Course;
 import com.example.jpc.course.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CourseService {
 
     @Autowired
@@ -99,4 +101,12 @@ public class CourseService {
         course.setCapacity(course.getCapacity() - 1);
         return convertToDTO(courseRepository.save(course));
     }
+
+
+
+
+
+
+
+
 }

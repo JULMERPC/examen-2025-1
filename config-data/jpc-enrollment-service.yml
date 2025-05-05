@@ -38,6 +38,69 @@ spring:
       ddl-auto: update
     show-sql: true
 
+feign:
+  circuitbreaker:
+    enabled: true
+
+
+# Configuración de Circuit Breaker con Resilience4j
+resilience4j:
+  circuitbreaker:
+    instances:
+      courseService:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+        permittedNumberOfCallsInHalfOpenState: 3
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+      studentService:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+        permittedNumberOfCallsInHalfOpenState: 3
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+  timelimiter:
+    instances:
+      courseService:
+        timeoutDuration: 3s
+      studentService:
+        timeoutDuration: 3s
+  retry:
+    instances:
+      courseService:
+        maxAttempts: 3
+        waitDuration: 500ms
+        retryExceptions:
+          - org.springframework.web.client.ResourceAccessException
+          - java.util.concurrent.TimeoutException
+      studentService:
+        maxAttempts: 3
+        waitDuration: 500ms
+        retryExceptions:
+          - org.springframework.web.client.ResourceAccessException
+          - java.util.concurrent.TimeoutException
+
+
+# Configuración de Actuator para monitoreo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,circuitbreakers,retries,timelimiters
+  health:
+    circuitbreakers:
+      enabled: true
+    retries:
+      enabled: true
+
+
+
 springdoc:
   api-docs:
     enabled: true

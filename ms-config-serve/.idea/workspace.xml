@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d79ca17f-8ec5-4e19-a464-0ef3fe377d0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/client/CourseClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/client/StudentClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/dto/CourseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpc-enrollment/src/main/java/com/example/jpc/enrollment/dto/EnrollmentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/util/StudentSeeder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpc-student/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config-data/jpc-student-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/jpc-student-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/MsStudentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/MsStudentApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/controller/CategoriaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/dto/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/dto/StudentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/entity/Categoria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/repository/CategoriaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/CategoriaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/impl/CategoriaServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/java/com/example/jpc/student/util/CategoriaSeeder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpc-student/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/msconfigserve/MsConfigServeApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/msconfigserve/MsConfigServeApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/jpc-course-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/jpc-course-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-course/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-course/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpc-course/src/main/java/com/example/jpc/course/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpc-course/src/main/java/com/example/jpc/course/service/CourseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,27 +32,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MsConfigServeApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/DAD/DAD-2025-1/ms-config-serve&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.MsConfigServeApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/DAD/EXAMEN-2025/ms-config-serve",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MsConfigServeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="jpc-config-serve" />
@@ -119,6 +91,7 @@
       <workItem from="1744294909984" duration="1638000" />
       <workItem from="1745193591624" duration="756000" />
       <workItem from="1745418655073" duration="833000" />
+      <workItem from="1746407352503" duration="601000" />
     </task>
     <servers />
   </component>

@@ -62,6 +62,41 @@ eureka:
     hostname: localhost
 
 
+
+
+
+
+
+#resilience4j:
+#  circuitbreaker:
+#    instances:
+#      courseService:
+#        registerHealthIndicator: true
+#        slidingWindowSize: 10
+#        slidingWindowType: COUNT_BASED
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        minimumNumberOfCalls: 5
+#        waitDurationInOpenState: 5s
+#        failureRateThreshold: 50
+#        eventConsumerBufferSize: 10
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info,circuitbreakers
+#  health:
+#    circuitbreakers:
+#      enabled: true
+#
+
+
+
+
+
+
+
+
 # config-data/jpc-course-service.yml
 #server:
 #  port: 8093

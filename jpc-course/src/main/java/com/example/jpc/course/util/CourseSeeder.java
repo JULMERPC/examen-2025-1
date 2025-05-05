@@ -50,9 +50,11 @@ package com.example.jpc.course.util;
 import com.example.jpc.course.entity.Course;
 import com.example.jpc.course.repository.CourseRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Profile("dev")
 public class CourseSeeder implements CommandLineRunner {
 
     private final CourseRepository courseRepository;

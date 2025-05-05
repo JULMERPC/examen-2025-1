@@ -41,39 +41,6 @@ public class EnrollmentService {
                 .orElseThrow(() -> new RuntimeException("Enrollment not found with id: " + id));
         return convertToDTOWithDetails(enrollment);
     }
-//
-//    public EnrollmentDTO createEnrollment(EnrollmentDTO enrollmentDTO) {
-//        try {
-//            // Verify student exists and is active
-//            StudentDTO student = studentClient.getStudentById(enrollmentDTO.getStudentId());
-//            if (!"active".equalsIgnoreCase(student.getStatus())) {
-//                throw new RuntimeException("Student is not active");
-//            }
-//
-//            // Verify course exists and has capacity
-//            CourseDTO course = courseClient.getCourseById(enrollmentDTO.getCourseId());
-//            Long currentEnrollments = enrollmentRepository.countByCourseId(enrollmentDTO.getCourseId());
-//            if (currentEnrollments >= course.getCapacity()) {
-//                throw new RuntimeException("Course has reached its maximum capacity");
-//            }
-//
-//            // Check if student is already enrolled in the course
-//            if (enrollmentRepository.existsByStudentIdAndCourseId(enrollmentDTO.getStudentId(), enrollmentDTO.getCourseId())) {
-//                throw new RuntimeException("Student is already enrolled in this course");
-//            }
-//
-//            // Set cycle from course
-//            enrollmentDTO.setCycle(course.getCycle());
-//
-//            Enrollment enrollment = convertToEntity(enrollmentDTO);
-//            return convertToDTOWithDetails(enrollmentRepository.save(enrollment));
-//
-//        } catch (FeignException e) {
-//            throw new RuntimeException("Error while communicating with other services: " + e.getMessage());
-//        }
-//    }
-
-
 
     public EnrollmentDTO createEnrollment(EnrollmentDTO enrollmentDTO) {
         try {
@@ -199,10 +166,4 @@ public class EnrollmentService {
         enrollment.setCycle(dto.getCycle());
         return enrollment;
     }
-
-
-
-
-
-
 }

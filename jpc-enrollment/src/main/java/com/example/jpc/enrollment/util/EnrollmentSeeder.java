@@ -50,9 +50,11 @@ package com.example.jpc.enrollment.util;
 import com.example.jpc.enrollment.entity.Enrollment;
 import com.example.jpc.enrollment.repository.EnrollmentRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("dev")
 public class EnrollmentSeeder implements CommandLineRunner {
 
     private final EnrollmentRepository enrollmentRepository;
