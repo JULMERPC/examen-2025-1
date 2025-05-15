@@ -12,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+
 @Data
 @Builder
 @NoArgsConstructor
