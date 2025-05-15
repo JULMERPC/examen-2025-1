@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 
 
-import jakarta.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
