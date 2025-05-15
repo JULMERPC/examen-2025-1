@@ -70,3 +70,10 @@ spring:
           uri: lb://jpc-student-service
           predicates:
             - Path=/api/students/**
+
+
+        - id: ms-auth-service
+          uri: lb://ms-auth-service
+          predicates:
+            - Path=/auth/**
+
