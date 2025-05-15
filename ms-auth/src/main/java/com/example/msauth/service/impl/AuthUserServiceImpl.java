@@ -54,7 +54,7 @@ public class AuthUserServiceImpl implements AuthUserService {
     @Override
     public TokenDto login(AuthUserDto authUserDto) {
         Optional<AuthUser> user = authUserRepository.findByUsername(authUserDto.getUserName());
-        if (!user.isPresent())
+        if (user.isEmpty())
             return null;
         if (passwordEncoder.matches(authUserDto.getPassword(), user.get().getPassword()))
             return new TokenDto(jwtProvider.createToken(user.get()));
@@ -69,7 +69,7 @@ public class AuthUserServiceImpl implements AuthUserService {
         if (!jwtProvider.validate(token))
             return null;
         String username = jwtProvider.getUserNameFromToken(token);
-        if (!authUserRepository.findByUsername(username).isPresent())
+        if (authUserRepository.findByUsername(username).isEmpty())
             return null;
         return new TokenDto(token);
     }
