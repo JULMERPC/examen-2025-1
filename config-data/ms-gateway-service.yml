@@ -58,12 +58,16 @@ spring:
           uri: lb://jpc-course-service
           predicates:
             - Path=/api/courses/**
+          filters:
+            - AuthFilter
 
 
         - id: jpc-enrollment-service
           uri: lb://jpc-enrollment-service
           predicates:
             - Path=/api/enrollments/**
+          filters:
+            - AuthFilter
 
 
         - id: jpc-student-service
