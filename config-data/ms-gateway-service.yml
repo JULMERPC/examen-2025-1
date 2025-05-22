@@ -74,6 +74,8 @@ spring:
           uri: lb://jpc-student-service
           predicates:
             - Path=/api/students/**
+          filters:
+            - AuthFilter
 
 
         - id: ms-auth-service
